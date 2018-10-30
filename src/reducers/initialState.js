@@ -1,3 +1,6 @@
 export default {
-    todos: ["Eat", "Drink"],
+    todos: {
+        todos: ["Eat", "Drink", "Read my book"],
+        completed: ["Eat"],
+    },
 };

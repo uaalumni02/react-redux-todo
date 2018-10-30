@@ -8,11 +8,20 @@ const todoReducer = (state = initialState.todos, action) => {
             todos.push(action.todo);
             return {
                 ...state,
-                todos
+                todos,
             }
+        case types.COMPLETE_TODO:
+            const completed = [...state.completed];
+            completed.push(action.todo);
+            return {
+                ...state,
+                completed,
+            }
+
         default:
             return state;
     }
+    return state;
 }
 
 export default todoReducer;

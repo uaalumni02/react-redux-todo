@@ -6,3 +6,11 @@ export const addTodo = (todo) => {
         todo,
     }
 }
+
+
+export const completeTodo = (todo) => {
+    return {
+        type: types.COMPLETE_TODO,
+        todo,
+    }
+}

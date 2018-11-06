@@ -11,6 +11,7 @@ class Todos extends Component {
 
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleCompleteTodo = this.handleCompleteTodo.bind(this);
+    this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
   }
 
   handleKeyPress(event) {
@@ -27,6 +28,11 @@ class Todos extends Component {
     this.props.actions.completeTodo(todo);
   }
 
+  handleDeleteTodo(index) {
+    console.log('Getting here to delete');
+    this.props.actions.deleteTodo(index);
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +43,7 @@ class Todos extends Component {
           todos={this.props.todos} 
           completed={this.props.completed}
           handleCompleteTodo={this.handleCompleteTodo}
+          handleDeleteTodo={this.handleDeleteTodo}
           />
       </div>
     )

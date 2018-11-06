@@ -1,0 +1,13 @@
+.Todo {
+    border: 1px solid #333;
+    width: 300px;
+    margin: 10px auto;
+    float: none;
+    padding: 10px;
+}
+
+.Todo span {
+    font-family: sans-serif;
+    font-size: 24px;
+    display: block;
+}

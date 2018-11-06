@@ -14,3 +14,10 @@ export const completeTodo = (todo) => {
         todo,
     }
 }
+
+export const deleteTodo = (index) => {
+    return {
+        type: types.DELETE_TODO,
+        index,
+    }
+}

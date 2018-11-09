@@ -50,7 +50,8 @@ class Todos extends Component {
     
   }
 }
-
+//function called mapStateToProps takes the original state as a prop and returns an object contacts todos and completed. This determines if the state has changed.
+//it pulls data from the store when it changes, and pass those values as props to your component; only for todos and completed
 const mapStateToProps = (state) => {
     return {
         todos: state.todos.todos,
@@ -58,10 +59,11 @@ const mapStateToProps = (state) => {
     }
 }
 
+//mapDispatchToProps function takes dispatch as a prop and dispatches the actions as soon as they are called. 
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(TodoActions, dispatch)
   }
 }
-
+//exports mapStateToProps, mapDispatchToProps and Todos while calling connect
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);

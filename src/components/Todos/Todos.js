@@ -62,6 +62,7 @@ const mapStateToProps = (state) => {
 //mapDispatchToProps function takes dispatch as a prop and dispatches the actions as soon as they are called. 
 const mapDispatchToProps = (dispatch) => {
   return {
+    //pass the action down to the component 
     actions: bindActionCreators(TodoActions, dispatch)
   }
 }
